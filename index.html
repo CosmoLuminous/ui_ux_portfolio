@@ -43,8 +43,18 @@
                 width: 100%;
                     -webkit-filter: grayscale(100%)
                     contrast(100%);
-                    filter: grayscale(100%) contrast(200%)
-                    brightness(60%);
+                    filter: grayscale(100%) contrast(140%)
+                    brightness(100%);
+            
+            }
+            
+            .education img{
+                max-width: 800px;
+                    -webkit-filter: grayscale(100%)
+                    contrast(100%);
+                    filter: grayscale(100%) contrast(140%)
+                    brightness(100%);
+                padding-left: 20%;
             
             }
             
@@ -120,6 +130,12 @@
                 padding: 12px 50px 12px 50px;                
             }
             
+            main img{
+                max-width: 800px;               
+                
+                
+            }
+            
             header{
                 text-align: center;
                 letter-spacing: 2px;
@@ -130,7 +146,6 @@
                 font-weight: bold;
                 font-size: 4em;
                 letter-spacing: 4px; 
-                padding-top: 20%;
             }
             
             header h4{
@@ -138,10 +153,10 @@
                 font-size: 1em;
                 letter-spacing: 4px;
                 color: #b2b2b2;
-                padding-bottom: 20%;
                 
             }
             
+            .education,
             .about,
             .folio,
             .contact{
@@ -153,6 +168,7 @@
             }
             
             
+            .education h2,
             .about h2,
             .folio h2,
             .contact h2{
@@ -162,6 +178,18 @@
                 margin: 100px 0 0 0;
                 letter-spacing: 4px;
                 
+            }
+            
+            
+            .education h3{                
+                color: #b2b2b2;
+                margin-bottom: -2%;
+                padding-bottom: 10px;
+            }
+            
+            .education h4{
+                
+                margin-bottom: -2%;
             }
             
             .about p{
@@ -195,26 +223,46 @@
                 
             }
             
-            .skill1{
-                width: 95%;
+            .xd{
+                width: 90%;
                 
             }
             
-            .skill2{
-                width: 90%;
+            .invision{
+                width: 80%;
             
             }
             
-            .skill3{
+            .photoshop{
                 width: 85%;
             }
             
-            .skill4{
-                width: 65%;
+            .illustrator{
+                width: 60%;
             }
             
-            .skill5{
-                width: 60%;
+            .js{
+                width: 70%;
+            }
+            
+            .html{
+                width: 50%;
+            }
+            
+            .css{
+                width: 50%;
+            }
+            
+            .csharp{
+                width: 80%;
+            }
+            
+            .mvc{
+                width: 75%;
+            }
+            
+            .github{
+                width: 85%;
             }
             
             
@@ -432,6 +480,11 @@
                 <p>Home</p>
                 </a>
                 
+                                
+                <a href="#education"><i class="material-icons md-36">import_contacts</i>
+                <p>Education</p>
+                </a>
+                
                 <a href="#about"><i class="material-icons md-36">person</i>
                 <p>About</p>
                 </a>
@@ -450,6 +503,7 @@
         
         <nav class="mobile-nav">
         <a href="#home">Home</a>
+        <a href="#education">Education</a>
         <a href="#about">About</a>
         <a href="#folio">Folio</a>
         <a href="#contact">Contact</a>
@@ -459,12 +513,39 @@
         <main>
             <header class="home" id="home"><br><br>
                 
+                <img src="images/frank-chimero.png" alt="">
                 <h1>I'm Aman Bhardwaj</h1>
                 <h4>UI UX Designer || Front-End Developer</h4>
-                <!--<img src="profile.jpg" alt="">-->
             
             </header>
         </main>
+        <section class="education" id="education">
+            <h2>Education</h2>
+            
+            <h3>National Institute of Technology (NIT), Hamirpur(H.P)</h3>
+            <h4>B.TECH: Electronics & Communication Engineering</h4>
+            
+            <p>
+                <span>CGPI:</span> 8.73/10       
+            </p>
+            
+            <h3>St. Vivekanand Sr. Sec. School, Bikaner(Raj.)</h3>
+            <h4>HIGH SCHOOL(12th Class): Physics, Chemistry, Mathematics</h4>
+            
+            <p>
+                <span>PERCENTAGE:</span> 87.4%   
+            </p>
+            
+            <h3>Bikaner Boys' School, Bikaner(Raj.)</h3>
+            <h4>METRIC(10th Class)</h4>
+            
+            <p>
+                <span>PERCENTAGE:</span> 91.2%
+            </p>
+            
+            <img src="images/billy-gregory.png" alt="">
+        </section>
+        
         
         <section class="about" id="about">
             <h2>About me</h2>
@@ -479,31 +560,58 @@
             </p>
             
             <h3>My skills</h3>
-            <p>Skill1</p>
+            <p>Adobe XD</p>
             <div class="container">
-                <div class="skills skill1">90%</div>            
+                <div class="skills xd">90%</div>            
             </div>
             
-            <p>Skill2</p>
+            <p>InvisionApp</p>
             <div class="container">
-                <div class="skills skill2">85%</div>            
+                <div class="skills invision">80%</div>            
+            </div>
+            
+            
+            <p>Adobe Photoshop</p>
+            <div class="container">
+                <div class="skills photoshop">85%</div>            
             </div>
         
             
-            <p>Skill3</p>
+            <p>Adobe Illustrator</p>
             <div class="container">
-                <div class="skills skill3">70%</div>          
+                <div class="skills illustrator">60%</div>          
             </div> 
             
-            <p>Skill4</p>
+            <p>JavaScript</p>
             <div class="container">
-                <div class="skills skill4">50%</div>          
+                <div class="skills js">70%</div>          
             </div> 
             
-            <p>Skill5</p>
+            <p>HTML</p>
             <div class="container">
-                <div class="skills skill5">40 %</div>          
+                <div class="skills html">50%</div>          
             </div> 
+            
+            <p>CSS</p>
+            <div class="container">
+                <div class="skills css">50%</div>          
+            </div>
+            
+            
+            <p>C#</p>
+            <div class="container">
+                <div class="skills csharp">80%</div>          
+            </div> 
+            
+            <p>ASP.NET (MVC, Winforms)</p>
+            <div class="container">
+                <div class="skills mvc">75%</div>          
+            </div>  
+            
+            <p>GitHub</p>
+            <div class="container">
+                <div class="skills github">85%</div>          
+            </div>
         </section>
         
         <section class="folio" id="folio">
