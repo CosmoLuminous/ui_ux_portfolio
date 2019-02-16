@@ -1,771 +1,802 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>UX Portfolio-Aman Bhardwaj</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
-        
-        <style type="text/css">
-            *,
-            *::before,
-            *::after{
-                
-                box-sizing: border-box;
+<head>
+    <meta charset="utf-8">
+    <title>UX Portfolio-Aman Bhardwaj</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <style type="text/css">
+        *,
+        *::before,
+        *::after {
+
+            box-sizing: border-box;
+        }
+
+        *:focus {
+            outline: none;
+
+        }
+
+        body {
+
+            padding: 0;
+            margin: 0;
+            background: #000;
+            color: white;
+            font-family: "Oxygen", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+
+            width: 100%;
+        }
+
+        .home img {
+            width: 100%;
+            -webkit-filter: grayscale(100%) contrast(100%);
+            filter: grayscale(100%) contrast(140%) brightness(100%);
+
+        }
+
+        .education img {
+            max-width: 800px;
+            -webkit-filter: grayscale(100%) contrast(100%);
+            filter: grayscale(100%) contrast(140%) brightness(100%);
+            padding-left: 20%;
+
+        }
+
+        .folio img {
+            filter: : grayscale(100%);
+
+        }
+
+        aside {
+
+            position: fixed;
+            background: #222;
+            top: 20px;
+            left: 0px;
+            width: 120px;
+            height: 100%;
+            overflow: none;
+            z-index: 1;
+            text-align: center;
+            padding: 0;
+        }
+
+        aside img {
+
+            filter: grayscale(100%) contrast(120%) brightness(100%);
+            margin-bottom: -3px;
+
+        }
+
+        .process img {
+            padding-top: 10px;
+            filter: grayscale(120%) contrast(100%) brightness(100%);
+        }
+
+        .material-icons.md-36 {
+            font-size: 36px;
+        }
+
+        aside a {
+
+            display: block;
+            padding: 15px 0;
+            color: white;
+            transition: all 0.35s ease-in-out;
+            text-transform: uppercase;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+
+        }
+
+        aside p {
+
+            margin: 0;
+            padding: 0;
+
+        }
+
+        aside a:hover {
+            background: #000;
+
+        }
+
+        aside nav a:nth-child(2) {
+            background: #000;
+        }
+
+        aside nav a:nth-child(2):hover {
+            background: #b2b2b2;
+            color: #222;
+
+        }
+
+        main {
+            max-width: 980px;
+            background: #000;
+            margin-left: 20%;
+            padding: 12px 50px 12px 50px;
+        }
+
+        main img {
+            max-width: 800px;
+
+
+        }
+
+        header {
+            text-align: center;
+            letter-spacing: 2px;
+
+        }
+
+        header h1 {
+            font-weight: bold;
+            font-size: 4em;
+            letter-spacing: 4px;
+        }
+
+        header h4 {
+            font-weight: 300;
+            font-size: 1em;
+            letter-spacing: 4px;
+            color: #b2b2b2;
+
+        }
+
+        .education,
+        .about,
+        .folio,
+        .process,
+        .contact {
+            line-height: 1.5em;
+            letter-spacing: 1px;
+            font-weight: 300;
+            margin-left: 20%;
+            margin-right: 10%;
+        }
+
+
+        .education h2,
+        .about h2,
+        .folio h2,
+        .process h2,
+        .contact h2 {
+            font-weight: 300;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            margin: 100px 0 0 0;
+            letter-spacing: 4px;
+
+        }
+
+
+        .education h3 {
+            color: #b2b2b2;
+            margin-bottom: -2%;
+            padding-bottom: 10px;
+        }
+
+        .education h4 {
+
+            margin-bottom: -2%;
+        }
+
+        .about p {
+            color: #b2b2b2;
+
+        }
+
+        .about span {
+            font-weight: 600;
+            color: white;
+
+        }
+
+        .about h3 {
+            font-weight: 300;
+            margin: 50px 0;
+
+        }
+
+        .container {
+            width: 100%;
+            background-color: #b2b2b2;
+        }
+
+        .skills {
+            text-align: right;
+            padding-right: 20px;
+            line-height: 30px;
+            color: white;
+            background-color: #424242;
+
+        }
+
+        .xd {
+            width: 90%;
+
+        }
+
+        .invision {
+            width: 80%;
+
+        }
+
+        .photoshop {
+            width: 85%;
+        }
+
+        .illustrator {
+            width: 60%;
+        }
+
+        .ng {
+            width: 60%;
+        }
+
+        .docker {
+            width: 65%;
+        }
+
+        .oc {
+            width: 70%;
+        }
+
+        .jenkins {
+            width: 85%;
+        }
+
+        .js {
+            width: 70%;
+        }
+
+        .html {
+            width: 75%;
+        }
+
+        .css {
+            width: 65%;
+        }
+
+        .csharp {
+            width: 80%;
+        }
+
+        .mvc {
+            width: 75%;
+        }
+
+        .github {
+            width: 85%;
+        }
+
+
+        .folio h3 {
+            color: white;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .folio p {
+            font-size: 0.875em;
+        }
+
+        .row-halves {
+            display: -webkit-box;
+            display: -ms-flesbox;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            -webkit-flex-pack: justify;
+
+        }
+
+        .row-halves .col {
+            width: 49%;
+        }
+
+        .col {
+            border: 1px solid #222;
+            background: #222;
+            color: #b2b2b2;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            color: #b2b2b2;
+            font-size: 24px;
+
+        }
+
+        form input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border: 1px solid #222;
+            background: transparent;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            color: #b2b2b2;
+
+        }
+
+        form input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border: 1px solid #009688;
+        }
+
+        input[type="submit"] {
+            background-color: transparent;
+            color: #b2b2b2;
+            text-transform: uppercase;
+            padding: 12px 20px;
+            border: 1px solid #222;
+            cursor: pointer;
+            transition: all 0.35s;
+
+        }
+
+        input[type="submit"] {
+            background-color: transparent;
+            color: #b2b2b2;
+            text-transform: uppercase;
+            padding: 12px 20px;
+            border: 1px solid #222;
+            cursor: pointer;
+            transition: all 0.35s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #b2b2b2;
+            color: #222;
+        }
+
+        .contact .container {
+            margin-top: 20px;
+            margin-bottom: 100px;
+            background: transparent;
+            padding: 20px 0;
+
+        }
+
+        .footer {
+            border-top: 1px solid #222;
+
+        }
+
+        .top-bar {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .top-bar a {
+            margin: 10px;
+            font-size: 2em;
+            color: #b2b2b2;
+            transition: all 0.35s;
+            display: inline-block;
+        }
+
+        .top-bar a:hover {
+            transform: scale(1.1);
+            color: #009688;
+        }
+
+        .bottom-bar {
+            background: #000;
+            font-size: 0.75em;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            .row-halves {
+                display: block;
             }
-            
-            *:focus{
-                outline: none;
-                
-            }
-            
-            body{
-                
-                padding: 0;
-                margin: 0;
-                background: #000;
-                color: white;
-                font-family: "Oxygen", sans-serif;
-            }
-            
-            a{
-                text-decoration: none;
-            }
-            
-            img{
-                
+
+            .row-halves .col {
                 width: 100%;
+                margin: 0 0 10px 0;
+
             }
-            
-            .home img{
+        }
+
+        @media(max-width: 601px) {
+            aside {
+                display: none;
+
+            }
+
+            main {
                 width: 100%;
-                    -webkit-filter: grayscale(100%)
-                    contrast(100%);
-                    filter: grayscale(100%) contrast(140%)
-                    brightness(100%);
-            
+                margin: 0 auto;
+                padding: 12px 25px;
+
+
             }
-            
-            .education img{
-                max-width: 800px;
-                    -webkit-filter: grayscale(100%)
-                    contrast(100%);
-                    filter: grayscale(100%) contrast(140%)
-                    brightness(100%);
-                padding-left: 20%;
-            
+
+            header {
+                margin-top: 80px;
             }
-            
-            .folio img{
-                filter: : grayscale(100%);
-                
+
+            header h1 {
+                font-size: 3em;
+                line-height: 1.4em;
             }
-            
-            aside{
-                
+
+            header h4 {
+                font-size: 1em;
+                line-height: 2px;
+            }
+
+            .mobile-nav {
                 position: fixed;
-                background: #222;
-                top: 20px;
-                left: 0px;
-                width: 120px;
-                height: 100%;
-                overflow: none;
+                widows: 100%;
+                display: flex;
+                justify-content: space-around;
+                background: rgba(0, 0, 0, 0.8);
                 z-index: 1;
-                text-align: center;
-                padding: 0;
             }
-            
-            aside img{
-                
-                filter: grayscale(100%) contrast(120%)
-                    brightness(100%);
-                margin-bottom: -3px;
-                
-            }
-            
-            .process img{
-                padding-top: 10px;
-                filter: grayscale(120%) contrast(100%)
-                    brightness(100%);
-            }
-            
-            .material-icons.md-36{
-                font-size: 36px;
-            }
-            
-            aside a{
-                
-                display:block;
-                padding: 15px 0;
-                color: white;
-                transition: all 0.35s ease-in-out;
+
+            .mobile-nav a {
+                width: 100%;
+                color: #b2b2b2;
                 text-transform: uppercase;
-                font-size: 0.75em;
+                font-size: 0.875em;
                 letter-spacing: 2px;
-                
+                text-align: center;
+                padding: 10px 10px;
+                transition: all 0.35s;
+
+
             }
-            
-            aside p{
-                
-                margin: 0;
-                padding: 0;
-                
-            }
-            
-            aside a:hover{
-                background: #000;
-                
-            }
-            
-            aside nav a:nth-child(2){
-                background: #000;
-            }
-            
-            aside nav a:nth-child(2):hover{
+
+            .mobile-nav a:hover {
                 background: #b2b2b2;
                 color: #222;
-                
+
             }
-            
-            main{
-                max-width: 980px;
-                background: #000;
-                margin-left: 20%;
-                padding: 12px 50px 12px 50px;                
+        }
+
+
+        @media (min-width:600px) {
+            .mobile-nav {
+                display: none;
             }
-            
-            main img{
-                max-width: 800px;               
-                
-                
-            }
-            
-            header{
-                text-align: center;
-                letter-spacing: 2px;
-                
-            }
-            
-            header h1{
-                font-weight: bold;
-                font-size: 4em;
-                letter-spacing: 4px; 
-            }
-            
-            header h4{
-                font-weight: 300;
-                font-size: 1em;
-                letter-spacing: 4px;
-                color: #b2b2b2;
-                
-            }
-            
-            .education,
-            .about,
-            .folio,
-            .process,
-            .contact{
-                line-height: 1.5em;
-                letter-spacing: 1px;
-                font-weight: 300;
-                margin-left: 20%;
-                margin-right: 10%;
-            }
-            
-            
-            .education h2,
-            .about h2,
-            .folio h2,
-            .process h2,
-            .contact h2{
-                font-weight: 300;
-                text-transform: uppercase;                
-                padding-bottom: 10px;
-                margin: 100px 0 0 0;
-                letter-spacing: 4px;
-                
-            }
-            
-            
-            .education h3{                
-                color: #b2b2b2;
-                margin-bottom: -2%;
-                padding-bottom: 10px;
-            }
-            
-            .education h4{
-                
-                margin-bottom: -2%;
-            }
-            
-            .about p{
-                color: #b2b2b2;
-                
-            }
-            
-            .about span{
-                font-weight: 600;
-                color: white;
-                
-            }
-            
-            .about h3{
-                font-weight: 300;
-                margin: 50px 0;
-                
-            }
-            
-            .container{
-                width:100%;
-                background-color: #b2b2b2;
-            }
-            
-            .skills{
-                text-align: right;
-                padding-right: 20px;
-                line-height: 30px;
-                color: white;
-                background-color: #424242;
-                
-            }
-            
-            .xd{
-                width: 90%;
-                
-            }
-            
-            .invision{
-                width: 80%;
-            
-            }
-            
-            .photoshop{
-                width: 85%;
-            }
-            
-            .illustrator{
-                width: 60%;
-            }
-            
-            .js{
-                width: 70%;
-            }
-            
-            .html{
-                width: 50%;
-            }
-            
-            .css{
-                width: 50%;
-            }
-            
-            .csharp{
-                width: 80%;
-            }
-            
-            .mvc{
-                width: 75%;
-            }
-            
-            .github{
-                width: 85%;
-            }
-            
-            
-            .folio h3{
-                color:white;
-                font-weight: 300;
-                letter-spacing: 2px;
-            }
-            
-            .folio p{
-                font-size: 0.875em;
-            }
-            
-            .row-halves{
-                display: -webkit-box;
-                display: -ms-flesbox;
-                display: flex;
-                justify-content: space-between;
-                margin: 20px 0;
-                -webkit-flex-pack: justify;
-                
-            }
-            
-            .row-halves .col{
-                width: 49%;
-            }
-            
-            .col{
-                border: 1px solid #222;
-                background: #222;
-                color: #b2b2b2;
-                padding: 10px;
-            }
-            
-            label{
-                display: block;
-                color: #b2b2b2;
-                font-size: 24px;
-                
-            }
-            
-            form input[type="text"],
-            select,
-            textarea{
-                width: 100%;
-                padding: 12px;
-                border: none;
-                border: 1px solid #222;
-                background: transparent;
-                margin-top: 6px;
-                margin-bottom: 16px;
-                resize: vertical;
-                color: #b2b2b2;
-                
-            }
-            
-            form input[type="text"]:focus,
-            textarea:focus{
-                outline: none;
-                border: 1px solid #009688;
-            }
-            
-            input[type="submit"]{
-                background-color: transparent;
-                color: #b2b2b2;
-                text-transform: uppercase;
-                padding: 12px 20px;
-                border: 1px solid #222;
-                cursor: pointer;
-                transition: all 0.35s;
-                
-            }
-            
-            input[type="submit"]{
-                background-color: transparent;
-                color: #b2b2b2;
-                text-transform: uppercase;
-                padding: 12px 20px;
-                border: 1px solid #222;
-                cursor: pointer;
-                transition: all 0.35s;
-            }
-            
-            input[type="submit"]:hover{
-                background-color: #b2b2b2;
-                color: #222;
-            }
-            
-            .contact .container{
-                margin-top: 20px;
-                margin-bottom: 100px;
-                background: transparent;
-                padding: 20px 0;
-                
-            }
-            
-            .footer{
-                border-top: 1px solid #222;
-                
-            }
-            
-            .top-bar{
-                padding: 20px 0;
-                text-align: center;
-            }
-            
-            .top-bar a{
-                margin: 10px;
-                font-size: 2em;
-                color: #b2b2b2;
-                transition: all 0.35s;
-                display: inline-block;
-            }
-            
-            .top-bar a:hover{
-                transform: scale(1.1);
-                color: #009688;
-            }
-            
-            .bottom-bar{
-                background: #000;
-                font-size: 0.75em;
-                text-align: center;
-            }
-            
-            @media(max-width: 768px){
-                .row-halves{
-                    display: block;
-                }
-                .row-halves .col{
-                    width: 100%;
-                    margin: 0 0 10px 0;
-                    
-                }
-            }
-            
-             @media(max-width: 601px){
-                aside{
-                    display: none;
-                    
-                }
-                main{
-                    width: 100%;
-                    margin: 0 auto;
-                    padding: 12px 25px;
-                    
-                    
-                }
-                 
-                 header{
-                     margin-top: 80px;
-                 }
-                 
-                 header h1{
-                     font-size: 3em;
-                     line-height: 1.4em;
-                 }
-                 
-                 header h4{
-                     font-size: 1em;
-                     line-height: 2px;
-                 }
-                 
-                 .mobile-nav{
-                     position: fixed;
-                     widows: 100%;
-                     display: flex;
-                     justify-content: space-around;
-                     background: rgba(0,0,0,0.8);
-                     z-index: 1;
-                 }
-                 
-                 .mobile-nav a{
-                     width: 100%;
-                     color: #b2b2b2;
-                     text-transform: uppercase;
-                     font-size: 0.875em;
-                     letter-spacing: 2px;
-                     text-align: center;
-                     padding: 10px 10px;
-                     transition: all 0.35s;
-                     
-                     
-                 }
-                 
-                 .mobile-nav a:hover{
-                     background: #b2b2b2;
-                     color: #222;
-                     
-                 }
-            }
-            
-            
-            @media (min-width:600px){
-                .mobile-nav{
-                    display: none; 
-                }
-            }
-            
-            
-            
-            
-        
-        
-        
-        
-        </style>
-        
-    </head>
-    
-    <body>
-        
-        <aside>
-            <nav>
-                <img src="images/profile.jpg" alt="">
-                <a href="#home"><i class="material-icons md-36">home</i>
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <aside>
+        <nav>
+            <img src="images/profile.jpg" alt="">
+            <a href="#home"><i class="material-icons md-36">home</i>
                 <p>Home</p>
-                </a>
-                
-                                
-                <a href="#education"><i class="material-icons md-36">import_contacts</i>
+            </a>
+
+
+            <a href="#education"><i class="material-icons md-36">import_contacts</i>
                 <p>Education</p>
-                </a>
-                
-                <a href="#about"><i class="material-icons md-36">person</i>
+            </a>
+
+            <a href="#about"><i class="material-icons md-36">person</i>
                 <p>About</p>
-                </a>
-                
-                <a href="#folio"><i class="material-icons md-36">image</i>
+            </a>
+
+            <a href="#folio"><i class="material-icons md-36">image</i>
                 <p>My Work</p>
-                </a>
-                
-                <a href="#process"><i class="material-icons md-36">art_track</i>
+            </a>
+
+            <a href="#process"><i class="material-icons md-36">art_track</i>
                 <p>UX Process</p>
-                </a>
-            
-                <a href="#contact"><i class="material-icons md-36">mail</i>
+            </a>
+
+            <a href="#contact"><i class="material-icons md-36">mail</i>
                 <p>Contact</p>
-                </a>
-                
-                
-            </nav> 
-            
-        </aside>
-        
-        <nav class="mobile-nav">
+            </a>
+
+
+        </nav>
+
+    </aside>
+
+    <nav class="mobile-nav">
         <a href="#home">Home</a>
         <a href="#education">Education</a>
         <a href="#about">About</a>
         <a href="#folio">Folio</a>
         <a href="#contact">Contact</a>
         <a href="#process">UX Process</a>
-        
-        </nav>
-        
-        <main>
-            <header class="home" id="home"><br><br>
-                
-                <img src="images/Cover.png" alt="">
-                <h1>I'm Aman Bhardwaj</h1>
-                <h4>UI-UX Designer || Front-End Developer</h4>
-            
-            </header>
-        </main>
-        <section class="education" id="education">
-            <h2>Education</h2>
-            
-            <h3>National Institute of Technology (NIT), Hamirpur(H.P)</h3>
-            <h4>B.TECH: Electronics & Communication Engineering</h4>
-            
-            <p>
-                <span>CGPI:</span> 8.73/10       
-            </p>
-            
-            <h3>St. Vivekanand Sr. Sec. School, Bikaner(Raj.)</h3>
-            <h4>HIGH SCHOOL(12th Class): Physics, Chemistry, Mathematics</h4>
-            
-            <p>
-                <span>PERCENTAGE:</span> 87.4%   
-            </p>
-            
-            <h3>Bikaner Boys' School, Bikaner(Raj.)</h3>
-            <h4>METRIC(10th Class) * All India metrit certificate in Science</h4>
-            
-            <p>
-                <span>PERCENTAGE:</span> 91.2%
-            </p>
-            
-            <img src="images/dr--ralf-speth-1.png" alt="">
-        </section>
-        
-        
-        <section class="about" id="about">
-            <h2>About me</h2>
-            <p>
-                <span>Hello, I'm Aman</span> User Experience (UX) & User Interface (UI) Designer plus .Net Application Developer with 2 years of experience on UX Research and UI Design along with .Net windows/web applications development and DevOps tools. Also 1 year of freelancing experience.
 
-            
-            </p>
-            <p>
-                I believe that simple and elegant designs are the most effective ones. The UX Research and designing is an iterative process in which you explore, you design, you analyze, then again back to step one.
-            
-            </p>
-            
-            <h3>My skills</h3>
-            <p>Adobe XD</p>
-            <div class="container">
-                <div class="skills xd">90%</div>            
+    </nav>
+
+    <main>
+        <header class="home" id="home"><br><br>
+
+            <img src="images/Cover.png" alt="">
+            <h1>I'm Aman Bhardwaj</h1>
+            <h4>UI-UX Designer || Full Stack Developer || DevOps Engineer</h4>
+
+        </header>
+    </main>
+    <section class="education" id="education">
+        <h2>Education</h2>
+
+        <h3>National Institute of Technology (NIT), Hamirpur(H.P)</h3>
+        <h4>B.TECH: Electronics & Communication Engineering</h4>
+
+        <p>
+            <span>CGPI:</span> 8.73/10
+        </p>
+
+        <h3>St. Vivekanand Sr. Sec. School, Bikaner(Raj.)</h3>
+        <h4>HIGH SCHOOL(12th Class): Physics, Chemistry, Mathematics</h4>
+
+        <p>
+            <span>PERCENTAGE:</span> 87.4%
+        </p>
+
+        <h3>Bikaner Boys' School, Bikaner(Raj.)</h3>
+        <h4>METRIC(10th Class) * All India metrit certificate in Science</h4>
+
+        <p>
+            <span>PERCENTAGE:</span> 91.2%
+        </p>
+
+        <img src="images/dr--ralf-speth-1.png" alt="">
+    </section>
+
+
+    <section class="about" id="about">
+        <h2>About me</h2>
+        <p>
+            <span>Hello, I'm Aman</span> a User Experience (UX) & User Interface (UI) Designer, a full stack developer
+            & a DevOps Engineer with 2.5+ years of experience on UX Research and UI Design along with
+            windows/web applications development and CI/CD Pipeline integration with some of the latest DevOps tools.
+            Also 1 year of experience a freelancer.
+        </p>
+        <p>
+            I believe that simple and elegant designs are the most effective ones. The UX Research and designing is an
+            iterative process in which you explore, you design, you analyze, then again back to step one.
+
+        </p>
+
+        <h3>My skills</h3>
+        <p>Adobe XD</p>
+        <div class="container">
+            <div class="skills xd">90%</div>
+        </div>
+
+        <p>InvisionApp</p>
+        <div class="container">
+            <div class="skills invision">80%</div>
+        </div>
+
+
+        <p>Adobe Photoshop</p>
+        <div class="container">
+            <div class="skills photoshop">85%</div>
+        </div>
+
+
+        <p>Adobe Illustrator</p>
+        <div class="container">
+            <div class="skills illustrator">60%</div>
+        </div>
+
+        <p>Angular 6</p>
+        <div class="container">
+            <div class="skills ng">60%</div>
+        </div>
+
+        <p>Docker</p>
+        <div class="container">
+            <div class="skills docker">65%</div>
+        </div>
+
+        <p>OpenShift</p>
+        <div class="container">
+            <div class="skills oc">70%</div>
+        </div>
+
+        <p>Jenkins</p>
+        <div class="container">
+            <div class="skills jenkins">85%</div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="container">
+            <div class="skills js">70%</div>
+        </div>
+
+        <p>HTML5</p>
+        <div class="container">
+            <div class="skills html">75%</div>
+        </div>
+
+        <p>CSS3</p>
+        <div class="container">
+            <div class="skills css">65%</div>
+        </div>
+
+
+        <p>C#</p>
+        <div class="container">
+            <div class="skills csharp">80%</div>
+        </div>
+
+        <p>ASP.NET (MVC, Winforms)</p>
+        <div class="container">
+            <div class="skills mvc">75%</div>
+        </div>
+
+        <p>GitHub</p>
+        <div class="container">
+            <div class="skills github">85%</div>
+        </div>
+    </section>
+
+    <section class="folio" id="folio">
+
+        <h2>My Folio</h2>
+
+        <div class="row-halves">
+            <div class="col">
+                <img src="images/PlaceApp.jpg" alt="">
+                <h3>PLACE</h3>
+                <p>an Android app which helps you to find an apartment to rent when you move to a new place. The main
+                    eye catchy feature is you can Swipe through apartments Just like Tinder.</p>
+
             </div>
-            
-            <p>InvisionApp</p>
-            <div class="container">
-                <div class="skills invision">80%</div>            
+
+            <div class="col">
+                <img src="images/place%20all.jpg" alt="">
+                <h3>PLACE (More Screens) </h3>
+                <p>1.Load Screen <br />2.Nearby Areas View<br /> 3.Apartment Details with Live Tour</p>
+
             </div>
-            
-            
-            <p>Adobe Photoshop</p>
-            <div class="container">
-                <div class="skills photoshop">85%</div>            
+
+
+        </div>
+
+        <div class="row-halves">
+            <div class="col">
+                <img src="images/customitNow.jpg" alt="">
+                <h3>CustomItNow: Product Page</h3>
+                <p>An e-commerce website. Product details page with suggestions for the user.</p>
+
             </div>
-        
-            
-            <p>Adobe Illustrator</p>
-            <div class="container">
-                <div class="skills illustrator">60%</div>          
-            </div> 
-            
-            <p>JavaScript</p>
-            <div class="container">
-                <div class="skills js">70%</div>          
-            </div> 
-            
-            <p>HTML5</p>
-            <div class="container">
-                <div class="skills html">50%</div>          
-            </div> 
-            
-            <p>CSS3</p>
-            <div class="container">
-                <div class="skills css">50%</div>          
+
+            <div class="col">
+                <img src="images/customitNow2.jpg" alt="">
+                <h3>CustomItNow: Product List Page</h3>
+                <p>Product list page with filters for the user along with the user flow indicator.</p>
+
             </div>
-            
-            
-            <p>C#</p>
-            <div class="container">
-                <div class="skills csharp">80%</div>          
-            </div> 
-            
-            <p>ASP.NET (MVC, Winforms)</p>
-            <div class="container">
-                <div class="skills mvc">75%</div>          
-            </div>  
-            
-            <p>GitHub</p>
-            <div class="container">
-                <div class="skills github">85%</div>          
+        </div>
+
+        <div class="row-halves">
+            <div class="col">
+                <img src="images/illustration3.jpg" alt="">
+                <h3>Illustration 1</h3>
+                <p></p>
+
             </div>
+
+            <div class="col">
+                <img src="images/illustration2.jpg" alt="">
+                <h3>Illustration 2</h3>
+                <p>Such Illustrations can be used to create eye catchy website backgrounds, Company Brandings, Logos
+                    etc</p>
+
+            </div>
+
+            <div class="col">
+                <img src="images/illustration1.jpg" alt="">
+                <h3>Illustration 3</h3>
+                <p></p>
+
+            </div>
+        </div>
+
+
+        <div class="row-halves">
+            <div class="col">
+                <img src="images/IgnitusPosterA3.jpg" alt="">
+                <h3>Ignitus: Ad Illustration</h3>
+                <p>A demo Poster where two characters talk and discuss about the Product details</p>
+
+            </div>
+
+            <div class="col">
+                <img src="images/Lo-FiHomePageDetailed.jpg" alt="">
+                <h3>Ignitus: Lo-Fidality Prototype</h3>
+                <p>Lo-Fi Prototype of website Home Page.This phase shows Lo-Fi picture of where elements will be placed
+                    and how the website will look. Doesn’t show exact elements.</p>
+
+            </div>
+        </div>
+
+
+        <div class="row-halves">
+            <div class="col">
+                <img src="images/Icons.jpg" alt="">
+                <h3>BIT_GUARD: Icons</h3>
+                <p>Some of the Icons designed for Bit-Guard a Crypto-Currency Startup.</p>
+
+            </div>
+
+            <div class="col">
+                <img src="images/Logo.jpg" alt="">
+                <h3>Logo</h3>
+                <p>A logo designed for my photography page during initial days of my College.</p>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section class="process" id="process">
+        <h2>My UX Design Process</h2>
+        <div class="container">
+            <img src="images/process.png">
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <div class="container">
+            <form action="mailto:aman.nith26@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name: </label>Aman Bhardwaj
+                <br /><br />
+                <label for="email">Email: </label>aman.nith26@gmail.com
+                <br /><br />
+                <label for="phone">Contact No: </label>+91-9882305248
+                <br /><br />
+                <label for="linkedin">LinkedIn: </label><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aman-bhardwaj-8557a277/">Click
+                    Me</a>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <section class="top-bar">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-github"></i></a>
+
         </section>
-        
-        <section class="folio" id="folio">
-            
-            <h2>My Folio</h2>
-            
-            <div class="row-halves">
-                <div class="col">
-                    <img src="images/PlaceApp.jpg" alt="">
-                    <h3>PLACE</h3>
-                    <p>an Android app which helps you to find an apartment to rent when you move to a new place. The main eye catchy feature is you can Swipe through apartments Just like Tinder.</p>
-                
-                </div>
-                
-                <div class="col">
-                    <img src="images/place%20all.jpg" alt="">
-                    <h3>PLACE (More Screens) </h3>
-                    <p>1.Load Screen <br/>2.Nearby Areas View<br/> 3.Apartment Details with Live Tour</p>
-                
-                </div>
-            
-            
-            </div>
-            
-            <div class="row-halves">
-                <div class="col">
-                    <img src="images/customitNow.jpg" alt="">
-                    <h3>CustomItNow: Product Page</h3>
-                    <p>An e-commerce website. Product details page with suggestions for the user.</p>
-                
-                </div>
-                
-                <div class="col">
-                    <img src="images/customitNow2.jpg" alt="">
-                    <h3>CustomItNow: Product List Page</h3>
-                    <p>Product list page with filters for the user along with the user flow indicator.</p>
-                
-                </div>
-            </div>
-              
-             <div class="row-halves">
-                <div class="col">
-                    <img src="images/illustration3.jpg" alt="">
-                    <h3>Illustration 1</h3>
-                    <p></p>
-                
-                </div>
-                
-                <div class="col">
-                    <img src="images/illustration2.jpg" alt="">
-                    <h3>Illustration 2</h3>
-                    <p>Such Illustrations can be used to create eye catchy website backgrounds, Company Brandings, Logos etc</p>
-                
-                </div>
-                
-                <div class="col">
-                    <img src="images/illustration1.jpg" alt="">
-                    <h3>Illustration 3</h3>
-                    <p></p>
-                
-                </div>
-            </div>
-            
-            
-            <div class="row-halves">
-                <div class="col">
-                    <img src="images/IgnitusPosterA3.jpg" alt="">
-                    <h3>Ignitus: Ad Illustration</h3>
-                    <p>A demo Poster where two characters talk and discuss about the Product details</p>
-                
-                </div>
-                
-                <div class="col">
-                    <img src="images/Lo-FiHomePageDetailed.jpg" alt="">
-                    <h3>Ignitus: Lo-Fidality Prototype</h3>
-                    <p>Lo-Fi Prototype of website Home Page.This phase shows Lo-Fi picture of where elements will be placed and how the website will look. Doesn’t show exact elements.</p>
-                
-                </div>
-            </div>
-            
-             
-            <div class="row-halves">
-                <div class="col">
-                    <img src="images/Icons.jpg" alt="">
-                    <h3>BIT_GUARD: Icons</h3>
-                    <p>Some of the Icons designed for Bit-Guard a Crypto-Currency Startup.</p>
-                
-                </div>
-                
-                <div class="col">
-                    <img src="images/Logo.jpg" alt="">
-                    <h3>Logo</h3>
-                    <p>A logo designed for my photography page during initial days of my College.</p>
-                
-                </div>
-            </div>
-                
-        
+        <section class="bottom-bar">
+            <p>&copy 2018 Aman Bhardwaj| All rights reserved.</p>
+
         </section>
-        
-        
-        <section class="process" id="process">
-            <h2>My UX Design Process</h2>
-            <div class="container">
-                <img src="images/process.png">
-            </div>
-        </section>
-        
-        <section class="contact" id="contact">
-            <h2>Contact Me</h2>
-            <div class="container">
-                <form action="mailto:aman.nith26@gmail.com" method="post" enctype="text/plain">
-                    <label for="name">Name: </label>Aman Bhardwaj
-                    <br/><br/>
-                    <label for="email">Email: </label>aman.nith26@gmail.com
-                    <br/><br/>
-                    <label for="phone">Contact No: </label>+91-9882305248
-                    <br/><br/>
-                    <label for="linkedin">LinkedIn: </label><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aman-bhardwaj-8557a277/">Click Me</a>
-                </form>
-            </div>
-        </section>
-        
-        <footer>
-            <section class="top-bar">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-github"></i></a>
-            
-            </section>
-            <section class="bottom-bar">
-                <p>&copy 2018 Aman Bhardwaj| All rights reserved.</p>
-            
-            </section>
-        
-        
-        </footer>
-    
-    
-    </body>
+
+
+    </footer>
+
+
+</body>
+
 </html>
